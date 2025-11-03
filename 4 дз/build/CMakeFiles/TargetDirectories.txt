@@ -1,0 +1,3 @@
+D:/C++/дз/4/build/CMakeFiles/sequence_calculator.dir
+D:/C++/дз/4/build/CMakeFiles/ALL_BUILD.dir
+D:/C++/дз/4/build/CMakeFiles/ZERO_CHECK.dir
