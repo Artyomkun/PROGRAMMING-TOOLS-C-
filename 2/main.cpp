@@ -11,13 +11,7 @@
 #include <limits>
 #include <sstream>
 
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
-using std::numeric_limits;
-using std::streamsize;
-using std::stringstream;
+using namespace std;
 
 namespace {
     const int VISUAL_MODE = 1;

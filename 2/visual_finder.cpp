@@ -8,21 +8,7 @@
 #include <iomanip>
 #include <sstream>
 
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
-using std::vector;
-using std::stringstream;
-using std::setw;
-using std::left;
-using std::right;
-using std::this_thread::sleep_for;
-using std::chrono::milliseconds;
-using std::to_string;
-using std::getline;
-using std::numeric_limits;
-using std::streamsize;
+using namespace std;
 
 int VisualMinFinder::findMin(int first_number, int second_number) {
     return (first_number < second_number) ? first_number : second_number;
@@ -59,7 +45,7 @@ void VisualMinFinder::run() {
         if (i < numbers.size() - 1) cout << ", ";
     }
     cout << endl << "Formula: min(min(" << numbers[0] << ", " << numbers[1] 
-         << "), min(" << numbers[2] << ", " << numbers[3] << "))" << endl;
+            << "), min(" << numbers[2] << ", " << numbers[3] << "))" << endl;
     cout << endl << "Press Enter to continue...";
     cin.get();
 }
@@ -86,7 +72,7 @@ string VisualMinFinder::centerString(const string& text, int width) {
 }
 
 void VisualMinFinder::delay(int ms) {
-    sleep_for(milliseconds(ms));
+    std::this_thread::sleep_for(std::chrono::milliseconds(ms));
 }
 
 void VisualMinFinder::drawComparisonBox(int number_a, int number_b, int result, const string& title) {

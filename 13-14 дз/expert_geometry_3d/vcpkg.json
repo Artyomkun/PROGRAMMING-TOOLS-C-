@@ -1,0 +1,12 @@
+{
+    "name": "expert-geometry-3d",
+    "version": "1.0.0",
+    "dependencies": [
+      "directx-headers",
+      "directxmath",
+      "directxtk",
+      "directx-dxc",
+      "qt5-base[platform-windows]",
+      "qt5-tools"
+    ]
+}

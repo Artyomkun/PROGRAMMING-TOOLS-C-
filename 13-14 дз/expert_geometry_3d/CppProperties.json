@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "name": "x64-Debug",
+      "includePath": [
+        "D:/C++/дз/13-14 дз/expert_geometry_3d/**",
+        "D:/Visual Studio/VC/Tools/MSVC/14.50.35717/include",
+        "C:/Program Files (x86)/Windows Kits/10/Include/10.0.26100.0/ucrt",
+        "C:/Program Files (x86)/Windows Kits/10/Include/10.0.26100.0/shared",
+        "C:/Program Files (x86)/Windows Kits/10/Include/10.0.26100.0/um",
+        "C:/Program Files (x86)/Windows Kits/10/Include/10.0.26100.0/winrt",
+        "C:/Program Files (x86)/Windows Kits/NETFXSDK/4.8/Include/um"
+      ],
+      "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE"
+      ],
+      "intelliSenseMode": "windows-msvc-x64",
+      "compilerPath": "D:/Visual Studio/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/cl.exe",
+      "cStandard": "c17",
+      "cppStandard": "c++17",
+      "windowsSdkVersion": "10.0.26100.0"
+    }
+  ],
+  "version": 4
+}

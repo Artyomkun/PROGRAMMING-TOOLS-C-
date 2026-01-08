@@ -5,10 +5,7 @@
 
 using namespace std;
 
-pair<double, int> calculate_Fx(const double* px, const double* pepsilon) {
-    double x = *px;
-    double epsilon = *pepsilon;
-
+pair<double, int> calculate_Fx(double x, double epsilon) {
     double sum = 1.0;
     double term = -pow(x, 3) / (3 * pow(4, 2));
     int count = 2;
@@ -54,7 +51,7 @@ int main() {
 
     int index = 1;
     for (double x = a; x <= b + 1e-9; x += h) {
-        auto [value, terms] = calculate_Fx(&x, &epsilon);
+        auto [value, terms] = calculate_Fx(x, epsilon);
         cout 
             << left << setw(25) << fixed << setprecision(2) << x
             << left << setw(25) << setprecision(10) << value

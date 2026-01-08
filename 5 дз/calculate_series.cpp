@@ -8,10 +8,13 @@ pair<double, int> calculate_series_sum(double epsilon) {
     double sum = 0.0;
     double term;
     int i = 1;
+    double current_value = 4.0 / (1 * 3);
 
     do {
-        term = pow(-2, i + 1) / (i * (2 * i + 1));
+        term = current_value;
         sum += term;
+        current_value = (-2.0 * current_value * (2*i + 1)) / ((2*i + 3) * (i + 1));
+        
         ++i;
     } while (fabs(term) >= epsilon);
 

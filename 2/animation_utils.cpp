@@ -4,11 +4,7 @@
 #include <thread>
 #include <chrono>
 
-using std::cout;
-using std::endl;
-using std::string;
-using std::this_thread::sleep_for;
-using std::chrono::milliseconds;
+using namespace std;
 
 const int AnimationUtils::DEFAULT_DOT_COUNT = 3;
 const int AnimationUtils::DEFAULT_DOT_DELAY_MS = 300;
@@ -20,13 +16,13 @@ void AnimationUtils::showProgressDots(int count, int delay_ms) {
     for (int i = 0; i < count; ++i) {
         cout << ".";
         cout.flush();
-        sleep_for(milliseconds(delay_ms));
+        std::this_thread::sleep_for(std::chrono::milliseconds(delay_ms));
     }
     cout << endl;
 }
 
 void AnimationUtils::delay(int ms) {
-    sleep_for(milliseconds(ms));
+    std::this_thread::sleep_for(std::chrono::milliseconds(ms));
 }
 
 void AnimationUtils::printSeparator(char symbol, int length) {

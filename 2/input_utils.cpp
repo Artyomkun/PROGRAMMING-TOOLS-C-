@@ -5,16 +5,7 @@
 #include <vector>
 #include <limits>
 
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
-using std::vector;
-using std::stringstream;
-using std::numeric_limits;
-using std::streamsize;
-
-// ОСНОВНЫЕ ФУНКЦИИ ПО ЗАДАНИЮ - НАВЕРХУ
+using namespace std;
 
 int InputUtils::getIntegerInput(const string& prompt) {
     int value;
@@ -55,7 +46,7 @@ vector<int> InputUtils::getNumbersFromLine(int expected_count) {
     
     if (numbers.size() != expected_count) {
         cout << "Warning: Expected " << expected_count 
-             << " numbers, but got " << numbers.size() << endl;
+                << " numbers, but got " << numbers.size() << endl;
     }
     
     return numbers;
@@ -70,7 +61,7 @@ bool InputUtils::validateNumbersCount(const vector<int>& numbers, int expected_c
     
     if (!is_valid) {
         cout << "Validation failed: Expected " << expected_count 
-             << " numbers, but got " << numbers.size() << endl;
+                << " numbers, but got " << numbers.size() << endl;
     }
     
     return is_valid;

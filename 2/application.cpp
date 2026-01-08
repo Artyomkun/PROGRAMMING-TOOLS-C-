@@ -8,19 +8,7 @@
 #include <sstream>
 #include <stdexcept>
 
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
-using std::vector;
-using std::stringstream;
-using std::numeric_limits;
-using std::streamsize;
-using std::this_thread::sleep_for;
-using std::chrono::milliseconds;
-using std::invalid_argument;
-using std::to_string;
-using std::getline;
+using namespace std;
 
 int Application::findMin(int first_number, int second_number) {
     return (first_number < second_number) ? first_number : second_number;
@@ -76,13 +64,13 @@ void Application::showProgressDots(int count, int delay_ms) {
     for (int i = 0; i < count; ++i) {
         cout << ".";
         cout.flush();
-        sleep_for(milliseconds(delay_ms));
+        std::this_thread::sleep_for(std::chrono::milliseconds(delay_ms));
     }
     cout << endl;
 }
 
 void Application::delay(int ms) {
-    sleep_for(milliseconds(ms));
+    std::this_thread::sleep_for(std::chrono::milliseconds(ms));
 }
 
 void Application::printSeparator(char symbol, int length) {

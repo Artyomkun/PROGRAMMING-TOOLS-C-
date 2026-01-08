@@ -1,0 +1,20 @@
+Group: 2023-1
+
+Students sorted by total score (ascending):
+============================================
+
+Petrov Petr Petrovich
+Birth date: 20.8.2001
+Marks: 3 4 3 4 3
+Total score: 17
+----------------------------------------
+Ivanov Ivan Ivanovich
+Birth date: 15.5.2000
+Marks: 5 4 5 4 5
+Total score: 23
+----------------------------------------
+Sidorova Maria Sergeevna
+Birth date: 10.3.2000
+Marks: 5 5 5 5 5
+Total score: 25
+----------------------------------------

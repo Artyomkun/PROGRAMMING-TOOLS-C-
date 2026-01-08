@@ -5,19 +5,17 @@
 #include <string>
 #include <algorithm>
 
-using std::cout;
-using std::endl;
-using std::string;
+using namespace std;
 
 const int MinFinder::ANIMATION_DELAY_MS = 500;
-const char* const MinFinder::PROGRAM_TITLE = "MINIMUM VALUE FINDER";
+const string MinFinder::PROGRAM_TITLE = "MINIMUM VALUE FINDER";
 
 int MinFinder::findMin(int a, int b) {
     return a < b ? a : b;
 }
 
 int MinFinder::findMinOfFour(int a, int b, int c, int d) {
-    return std::min(std::min(a, b), std::min(c, d));
+    return findMin(findMin(a, b), findMin(c, d));
 }
 
 void MinFinder::showCalculationProcess(int a, int b, int c, int d) {
@@ -33,21 +31,21 @@ void MinFinder::showCalculationProcess(int a, int b, int c, int d) {
     cout << "\n" << STEP_1_TEXT << endl;
     cout << "Calculating min(" << a << ", " << b << ")";
     AnimationUtils::showProgressDots();
-    int min1 = std::min(a, b);  
+    int min1 = findMin(a, b); 
     cout << "Result: " << min1 << " ✓" << endl;
     AnimationUtils::delay(ANIMATION_DELAY_MS);
     
     cout << "\n" << STEP_2_TEXT << endl;
     cout << "Calculating min(" << c << ", " << d << ")";
     AnimationUtils::showProgressDots();
-    int min2 = std::min(c, d);
+    int min2 = findMin(c, d); 
     cout << "Result: " << min2 << " ✓" << endl;
     AnimationUtils::delay(ANIMATION_DELAY_MS);
     
     cout << "\n" << STEP_3_TEXT << endl;
     cout << "Calculating min(" << min1 << ", " << min2 << ")";
     AnimationUtils::showProgressDots();
-    int result = std::min(min1, min2);
+    int result = findMin(min1, min2);
     cout << "Result: " << result << " ✓" << endl;
 }
 

@@ -6,10 +6,10 @@
 class AnimationUtils {
 public:
     static void showProgressDots(int count = DEFAULT_DOT_COUNT, 
-                                 int delay_ms = DEFAULT_DOT_DELAY_MS);
+                                int delay_ms = DEFAULT_DOT_DELAY_MS);
     static void delay(int milliseconds);
     static void printSeparator(char symbol = DEFAULT_SEPARATOR_SYMBOL, 
-                              int length = DEFAULT_SEPARATOR_LENGTH);
+                                int length = DEFAULT_SEPARATOR_LENGTH);
     static void printBoxedText(const std::string& text);
 
 private:
